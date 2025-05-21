@@ -2,7 +2,7 @@
 
 
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -12,32 +12,26 @@ body{
     padding: 0;
 }
 
-.container-1 {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-/* css header */
+/* header */
 
 .header {
     background-color: #1f2937;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    margin: 0;
+    padding: 0;
 }
 
-.header-logo {
-    font-size: 24px;
-    font-weight: 900;
-    color: #f9faf8;
-    padding: 16px;
+.header-logo img {
+    width: 100px;
+    height: auto;
 }
 
 ul {
     list-style-type: none;
     display: flex;
+    gap: 16px;
     padding: 0;
 }
 
@@ -45,76 +39,89 @@ li {
     text-decoration: none;
     color: #e5e7eb;
     font-size: 18px;
-    padding: 16px;
 }
 
-/* css content */
-.content-1 {
+li:hover {
+    color: #2c6cd1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.content {
     display: flex;
     justify-content: space-around;
-    background-color: #1f2937;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
+    padding: 60px 100px;
+    gap: 20px;
+    background-color: #1f2937;
 }
 
-.title-text {
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-}
-.title-text h1 {
-    font-size: 48px;
-    color: #f9faf8;
-    font-weight: 900;
+.left-content {
     text-align: left;
-    margin: 0;
-}
-
-.title-text p {
-    font-size: 18px;
-    color: #e5e7eb;
-    text-align: left;
-    margin: 0;
-}
-
-.title-text button {
-    background-color: #3882f6;;
-    padding: 8px 16px;
-    border-radius: 16px;
-    margin-top: 8px;
-    margin-right: auto;
-}
-
-.image img {
     flex: 1;
-    height: 225px;
-    margin-bottom: 16px;
 }
 
-/* container-2 */
-.container-2 {
+.right-content {
+    flex: 1;
+}
+
+.right-content img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: white;
+}
+
+.header-text {
+    font-size: 18px;
+    color: #d3d3d3;
+    max-width: 500px;
+    margin: 8px 0;
+}
+
+button {
+    background-color: #3882f6;
+    color: white;
+    padding: 5px 24px;
+    margin-top: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c6cd1;
+}
+
+
+/* container */
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.title-text-2 {
+.title-text {
     font-size: 36px;
     font-weight: 900;
     color: #1f2937;
     margin-top: 16px;
 }
 
-.container-2-info {
+.container-info {
     display: flex;
     margin: 8px;
     padding: 16px;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +130,6 @@ li {
 
 .border {
     display: flex;
-    border: 2px solid #3882f6;
     border-radius: 16px;
     width: 100px;
     height: 100px;
@@ -131,14 +137,21 @@ li {
     margin: 8px;
 }
 
+.border img {
+    border: 2px solid #2c6cd1;
+    width: 100px;
+    height: auto;
+    border-radius: 16px;
+}
+
+
 .text-border {
     max-width: 100px;
     margin-bottom: 16px;
 }
 
-/* container-3 */
-
-.container-3 {
+/* quote */
+.container-quote {
     background-color: #e5e7eb;
     display: flex;
     justify-content: center;
@@ -155,9 +168,9 @@ li {
 }
 
 .quote-text {
-    font-weight: lighter;
+    font-weight: 400;
     font-style: italic;
-    color: #1f2937;
+    color: #000c1c;
     text-align: left;
 }
 
@@ -169,6 +182,58 @@ li {
     margin-bottom: 16px;
 }
 
+/* Signup */
+
+.signup {
+    display: flex;
+    padding: 40px 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-signup {
+    background-color: #3882f6;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 32px;
+}
+
+.call-action {
+    text-align: left;
+    padding: 8px 24px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+}
+
+.call-action .heading {
+    font-size: 16px;
+    font-weight: 900;
+    color: #f9faf8;
+}
+
+.call-action .sub-text {
+    font-size: 12px;
+    font-weight: 200;
+    color: #f9faf8;
+}
+
+.button-signup {
+    flex-basis: 25%;
+    align-self: center;
+}
+
+.button-signup button{
+    font-size: 12px;
+    font-weight: 900;
+    color: #f9faf8;
+    border: 2px solid #f9faf8;
+    border-radius: 8px;
+    padding: 2px 16px;
+}
+
 /* footer */
 
 .footer {
@@ -176,4 +241,5 @@ li {
     color: #f9faf8;
     padding: 16px;
     font-size: 12px;
+    flex: 1;
 }
